@@ -25,14 +25,10 @@ function ContestResponse() {
 
 	for (let i=0; i<256; ++i) {
 		let temp = fishs[0];
-		fishs[0] = fishs[1];
-		fishs[1] = fishs[2];
-		fishs[2] = fishs[3];
-		fishs[3] = fishs[4];
-		fishs[4] = fishs[5];
-		fishs[5] = fishs[6];
-		fishs[6] = fishs[7] + temp;
-		fishs[7] = fishs[8];
+		for (let age=0; age<8; ++age) {
+			fishs[age] = fishs[age+1];
+		}
+		fishs[6] += temp;
 		fishs[8] = temp;
 
 		if (i === 80 - 1) {
