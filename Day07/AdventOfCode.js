@@ -27,7 +27,6 @@ function ContestResponse() {
 	let crabs = input[0].split(",").map(Number);
 
 	let minFuel = Infinity;
-	let minLine = undefined;
 	for (let i=Math.min(...crabs); i<=Math.max(...crabs); ++i) {
 		let fuel = crabs.reduce((acc, val) => acc + Math.abs(i-val), 0);
 		if (fuel < minFuel) minFuel = fuel;
@@ -35,7 +34,6 @@ function ContestResponse() {
 	console.log(`1: ${minFuel}`);
 
 	minFuel = Infinity;
-	minLine = undefined;
 	for (let i=Math.min(...crabs); i<=Math.max(...crabs); ++i) {
 		let fuel = crabs.reduce((acc, val) => acc + sumToZero(Math.abs(i-val)), 0);
 		if (fuel < minFuel) minFuel = fuel;
