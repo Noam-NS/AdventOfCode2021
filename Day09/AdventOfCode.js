@@ -70,4 +70,3 @@ function ContestResponse() {
 	let maxBassinsRisk = bassinSizes.sort((a, b) => b - a).slice(0, 3).reduce((acc, val) => acc * val);
 	console.log(`2: ${maxBassinsRisk}`);
 }
-//10257
